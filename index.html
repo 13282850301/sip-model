@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" sip-model="company.name">
+        <div>公司:{{company.name}} 部门:{{company.department}}</div>
+    </div>
+    <script src="./MyVue.js"></script>
+    <script>
+        let vm = new MyVue({
+            el: '#app',
+            data: {
+                company: {
+                    name: '深信服',
+                    department: 'SIP'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
