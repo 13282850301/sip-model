@@ -22,6 +22,7 @@ Util = {
             })
             return value;
         },
+        //输入框改变 改变$data里对应的数据
         setValue(expr, vm, newValue) {
             let keys = expr.split('.'), //['company','name'];
                 data = vm.$data;
@@ -32,6 +33,7 @@ Util = {
                 data = data[key];
             })
         },
+        ////{{company.name}} name 改变时 重新渲染 改变后的结果
         getContent(vm, expr) {
             let reg = /\{\{(.+?)\}\}/g,
                 me = this;
@@ -40,6 +42,7 @@ Util = {
             })
             return content;
         },
+        // 带{{}} 的文本节点
         text(node, expr, vm) { //expr: 公司:{{company.name}} 部门:{{company.department}}
             let reg = /\{\{(.+?)\}\}/g,
                 me = this;
