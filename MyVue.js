@@ -73,7 +73,7 @@ class Compile {
         }
         //
     node2Fragment(node) {
-        let fragment = document.createDocumentFragment(this.$el);
+        let fragment = document.createDocumentFragment();
         while (node.firstChild) {
             fragment.appendChild(node.firstChild);
         }
