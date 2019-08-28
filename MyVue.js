@@ -99,7 +99,7 @@ class Compile {
         let attrs = node.attributes; //类数组
         // console.log(attrs);
         [...attrs].forEach(attr => {
-            let { name, value } = attr;
+            let { name, value } = attr;//name='sip-model' value="company.name"
             if (this.isDirective(name)) {
                 let [, directive] = name.split('-');
                 Util[directive](node, value, this.vm);
