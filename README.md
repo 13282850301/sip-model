@@ -3,6 +3,7 @@
 
 # 劫持data 里的每个数据
   使用Object.defineProperty
+  ````
    Object.defineProperty(data, key, {
           get() {
               Dep.target && dep.addWatcher(Dep.target);
@@ -17,6 +18,8 @@
 
           }
       })
+   ````   
+   
 # 编译模板
   1.elementNode(元素节点 input) 监听sip-model 指令对应的数据 添加Watcher (订阅)，添加input事件
     function compileElement(node) {
