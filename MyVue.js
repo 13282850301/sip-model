@@ -136,6 +136,7 @@ class Observer {
         this.observer(value); //数据对象有多层
         Object.defineProperty(data, key, {
             get() {
+                 // 有多个{{}} 或v-model 的地方使用 当前的dep会有多个watcher 
                 Dep.target && dep.addWatcher(Dep.target);
                 return value;
             },
@@ -150,6 +151,7 @@ class Observer {
         })
     }
 }
+//依赖收集
 class Dep {
     constructor() {
         this.watchers = []; // 存放所有的watcher
