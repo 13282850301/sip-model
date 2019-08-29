@@ -33,7 +33,7 @@ Util = {
                 data = data[key];
             })
         },
-        ////{{company.name}} name 改变时 重新渲染 改变后的结果
+        ////{{company.name}} name 改变时 重新渲染 获取改变后的结果
         getContent(vm, expr) {
             let reg = /\{\{(.+?)\}\}/g,
                 me = this;
